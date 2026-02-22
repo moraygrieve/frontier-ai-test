@@ -1,6 +1,6 @@
 # Frontier AI Test
 
-A Python project for experimenting with various frontier AI models, with Docker utilities and automated testing using PySys. At the moment this only includes OpenAI though addition of Claude is WIP.
+A Python project for experimenting with various frontier AI models, with Docker utilities and automated testing using PySys. At the moment this only includes OpenAI though addition of Anthropic is WIP.
 
 ## Features
 - **Automated testing**: PySys-based test suite for API workflows
