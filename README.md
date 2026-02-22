@@ -63,12 +63,6 @@ frontier-ai-test/
 - Run a specific test:
   ```bash
   pysys run docker_001
-  pysys run docker_002
-  pysys run docker_003
-  pysys run docker_004
-  pysys run openai_001
-  pysys run openai_002
-  pysys run openai_003
   ```
 
 ## How it Works
