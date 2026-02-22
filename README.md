@@ -1,9 +1,9 @@
-# OpenAI API Test
+# Frontier AI Test
 
-A Python project for experimenting with the OpenAI API, with Docker utilities and automated testing using PySys.
+A Python project for experimenting with various frontier AI models, with Docker utilities and automated testing using PySys. At the moment this only includes OpenAI though addition of Claude is WIP.
 
 ## Features
-- **Automated testing**: PySys-based test suite for OpenAI and Docker workflows
+- **Automated testing**: PySys-based test suite for API workflows
 - **Docker utilities**: Reusable shells for non-interactive, interactive, and asynchronous container execution
 
 ## Project Structure
@@ -28,8 +28,8 @@ openai-api-test/
 - Python packages:
   - `openai`
   - `pysys`
-  - `docker` (for Docker tests)
-  - `PyYAML` (for `openai_003`)
+  - `docker`
+  - `PyYAML`
 
 ## Setup
 1. **Clone the repository:**
@@ -82,17 +82,7 @@ The project uses PySys for automated testing:
 - **OpenAI API**: Requires `OPENAI_API_KEY` in the environment for OpenAI tests
 - **Docker**: Required and must be running to execute Docker tests
 
-## Test Overview
-
-- **docker_001 (Non-interactive shell)**: Executes single commands in a fresh shell each time (no persistent environment variables or working directory).
-- **docker_002 (Interactive shell)**: Keeps a shell session open; environment variables and working directory persist across commands.
-- **docker_003 (Asynchronous shell)**: Starts a long-running command and polls until completion, then captures the result.
-- **openai_001**: Simple response sanity check using `gpt-4.1` and verifies the model returns `42`.
-- **openai_002**: Demonstrates tool/function calling; handles both direct model responses and function-call paths.
-- **openai_003**: Loads a prompt from YAML (`test/openai_003/Input/prompt.yaml`) and asserts the model avoids a deceptive answer.
-
 ## How it Works
-
 - PySys configuration is defined in `pysysproject.xml` (adds `./src` to the path).
 - Docker utilities live in `src/utils/docker.py` and provide:
   - `DockerNonInteractiveShell`
