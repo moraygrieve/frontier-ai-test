@@ -1,7 +1,6 @@
 # Frontier AI Test
-[PySys](https://pysys-test.github.io/pysys-test/) project for testing various Frontier AI models, currently those supported by OpenAI and Anthropic. The
-project uses the Python APIs for both models to investigate remote interactions with the models, which a view to extending to alignment evaluations. Note
-that paid subscripts and API keys are required to run the tests, e.g. the below should be included in your `~/.bashrc` file.
+[PySys](https://pysys-test.github.io/pysys-test/) project for testing various Frontier AI models, currently OpenAI and Anthropic. The project uses the Python client libraries for both models to investigate interactions with them, with a view to extending the project to alignment evaluations. Note that
+paid subscriptions and API keys are required to run the tests, e.g. the below should be included in your `~/.bashrc` file.
 
 ```
 export OPENAI_API_KEY=<openai key>
