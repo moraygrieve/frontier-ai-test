@@ -2,9 +2,9 @@
 <pysystest type="auto">
 
   <description>
-	<title>Test client asks GPT-4.1 a simple question</title>
+	<title>Test client asks Claude-4.6 a simple question</title>
 	<purpose><![CDATA[
-Performs a simple call to the GPT-4.1 model, asking a question for which we expect a known answer.
+Performs a simple call to the Claude-4.6 model, asking a question for which we expect a known answer.
 ]]>
 	</purpose>
   </description>

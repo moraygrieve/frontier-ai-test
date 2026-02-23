@@ -18,14 +18,13 @@ frontier-ai-test/
     ├── docker_001            # Non-interactive shell tests
     ├── docker_002            # Interactive shell tests
     ├── docker_003            # Asynchronous shell tests
-    ├── docker_004            # Interactive shell with whitelisted commands
     ├── openai_001            # Basic OpenAI response test
     ├── openai_002            # Function-calling/tool-use test
     └── openai_003            # YAML-driven prompt test
 ```
 
 ## Requirements
-- Python 3.11 (matches `pysysproject.xml`)
+- Python 3.8+ (matches `pysysproject.xml`)
 - Python packages:
   - `openai`
   - `pysys`
@@ -63,24 +62,32 @@ frontier-ai-test/
 - Run a specific test:
   ```bash
   pysys run docker_001
+  pysys run docker_002
+  pysys run docker_003
+  pysys run openai_001
+  pysys run openai_002
+  pysys run openai_003
   ```
 
 ## How it Works
 
+### Testing Framework
 The project uses PySys for automated testing:
 - Validates OpenAI API and Docker responses
 - Asserts expected outcomes
 - Provides detailed logging and output capture
 - Supports multiple test modes and configurations
 
-PySys configuration is defined in `pysysproject.xml` (adds `./src` to the path). Docker utilities live in `src/utils/docker.py` and provide:
-- `DockerNonInteractiveShell`
-- `DockerInteractiveShell`
-- `DockerAsynchronousShell`
-
 ## API Dependencies
 - **OpenAI API**: Requires `OPENAI_API_KEY` in the environment for OpenAI tests
 - **Docker**: Required and must be running to execute Docker tests
+
+## How it Works
+- PySys configuration is defined in `pysysproject.xml` (adds `./src` to the path).
+- Docker utilities live in `src/utils/docker.py` and provide:
+  - `DockerNonInteractiveShell`
+  - `DockerInteractiveShell`
+  - `DockerAsynchronousShell`
 
 ## License
 MIT
