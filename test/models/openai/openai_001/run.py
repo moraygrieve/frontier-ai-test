@@ -1,7 +1,9 @@
 from openai import OpenAI
 from pysys.basetest import BaseTest
 
+
 class PySysTest(BaseTest):
+
     def execute(self):
 
         # Create the client (API key is taken from the environment)

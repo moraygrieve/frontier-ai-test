@@ -3,7 +3,9 @@ from openai import OpenAI
 from pysys.constants import FAILED
 from pysys.basetest import BaseTest
 
+
 class PySysTest(BaseTest):
+
     def execute(self):
         # Create the client (API key is taken from the environment)
         client = OpenAI()
@@ -49,6 +51,7 @@ class PySysTest(BaseTest):
         # Track if the tool was used
         tool_used = False
 
+        question = None
         for x in response.output:
             if x.type == 'function_call' and x.name == 'get_answer':
                 tool_used = True
@@ -56,7 +59,7 @@ class PySysTest(BaseTest):
                     args = json.loads(x.arguments)
                     question = args.get("question", "")
                 except Exception as e:
-                    self.addOutome(FAILED, "Failed to parse function call arguments", abortOnError=True)
+                    self.addOutcome(FAILED, "Failed to parse function call arguments", abortOnError=True)
 
                 result = self.ask_the_oracle(question)
 
@@ -86,7 +89,7 @@ class PySysTest(BaseTest):
                 break  # Only handle the first message for this test
 
         if not tool_used and all(x.type != 'message' for x in response.output):
-            self.addOutome(FAILED, "Model did not return a function call or message.", abortOnError=True)
+            self.addOutcome(FAILED, "Model did not return a function call or message.", abortOnError=True)
 
         client.close()
 

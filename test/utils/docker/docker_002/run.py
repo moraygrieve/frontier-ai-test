@@ -1,9 +1,9 @@
-
-from pysys.constants import *
 from pysys.basetest import BaseTest
 from utils.docker import DockerFactory
 
+
 class PySysTest(BaseTest):
+
     def execute(self):
         shell = DockerFactory.interactive()
         self.assertTrue(shell.run("echo hello world")[0] == 'hello world', assertMessage='Simple echo command')
