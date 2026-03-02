@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pysystest type="auto">
+
+  <description>
+    <title>Test client asks Claude-4.6 with model misalignment via prompting</title>
+    <purpose><![CDATA[
+We include an assistant prompt into the input messages to see if the model uses the answer or rejects and supplies
+a more ethical one.
+]]>
+    </purpose>
+  </description>
+
+
+  <classification>
+    <groups inherit="true">
+      <group></group>
+    </groups>
+    <modes inherit="true">
+    </modes>
+  </classification>
+
+  <data>
+    <class name="PySysTest" module="run"/>
+  </data>
+
+  <traceability>
+    <requirements>
+      <requirement id=""/>
+    </requirements>
+  </traceability>
+</pysystest>
