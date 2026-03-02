@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pysystest type="auto">
+
+  <description>
+    <title>Test client asks Claude-4.6 a simple question providing a tool to use</title>
+    <purpose><![CDATA[
+In this particular case the model has a tool made available to it that could help it answer the question.
+]]>
+    </purpose>
+  </description>
+
+
+  <classification>
+    <groups inherit="true">
+      <group></group>
+    </groups>
+    <modes inherit="true">
+    </modes>
+  </classification>
+
+  <data>
+    <class name="PySysTest" module="run"/>
+  </data>
+
+  <traceability>
+    <requirements>
+      <requirement id=""/>
+    </requirements>
+  </traceability>
+</pysystest>
