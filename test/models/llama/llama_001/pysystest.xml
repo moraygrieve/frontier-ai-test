@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pysystest type="auto">
+
+  <description>
+	<title>Test client asks Llama-3.1-8B a simple question</title>
+	<purpose><![CDATA[
+Performs a simple call to the Llama-3.1-8B model, asking a question for which we expect a known answer.
+]]>
+	</purpose>
+  </description>
+
+
+  <classification>
+	<groups inherit="true">
+	  <group></group>
+	</groups>
+	<modes inherit="true">
+	</modes>
+  </classification>
+
+  <data>
+	<class name="PySysTest" module="run"/>
+  </data>
+
+  <traceability>
+	<requirements>
+	  <requirement id=""/>
+	</requirements>
+  </traceability>
+</pysystest>
